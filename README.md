@@ -22,6 +22,7 @@ Please, fill the following sections about your project.
 > Find a dataset (or multiple) that you will explore. Assess the quality of the data it contains and how much preprocessing / data-cleaning it will require before tackling visualization. We recommend using a standard dataset as this course is not about scraping nor data processing.
 >
 > Hint: some good pointers for finding quality publicly available datasets ([Google dataset search](https://datasetsearch.research.google.com/), [Kaggle](https://www.kaggle.com/datasets), [OpenSwissData](https://opendata.swiss/en/), [SNAP](https://snap.stanford.edu/data/) and [FiveThirtyEight](https://data.fivethirtyeight.com/)).
+
 Our project uses the US Coast Guard + NOAA AIS Datasets. AIS data consists of vessel traffic records transmitted through the Automatic Identification System, by which vessels continuously broadcast their identity, position, and navigational status while underway. Each broadcast's information constitutes a single AIS data point. The AIS data we use originates from the US Coast Guard's Nationwide Automatic Identification System (NAIS) land-based receiving network and is released by NOAA/BOEM through Marine Cadastre.
 
 These datasets primarily covers the continental United States, Alaska, Hawaii, Guam, and parts of the Caribbean. It typically does not cover the Arctic Ocean, ocean areas 40–50 miles from the coast, or foreign waters. Therefore, our research focuses primarily on US coastal and inland waterway shipping, rather than the vessel activity on the high seas.
