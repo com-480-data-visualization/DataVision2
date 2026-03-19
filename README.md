@@ -5,6 +5,7 @@
 | | |
 | Siyuan Zhang | 388143 |
 | Dmitry Teploukhov | 339647 |
+| Xinran Li | 389543 |
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
@@ -77,21 +78,11 @@ Representative examples include:
 
 - [Visual Analysis of Vessel Behaviour Based on Trajectory Data](https://www.mdpi.com/2220-9964/11/4/244) — example of academic AIS behavior/trajectory analysis.
 
-1. Motivation and Temporal Perspective
+Our approach will focus on interactive, time-aware, and multi-scale visualization of AIS data, instead of static maps. We plan to analyze how vessel trajectories change over time in major ports, allowing users to explore traffic patterns and their variations before, during, and after events. We aim to use trajectory-based methods to reveal movement patterns beyond simple density maps, and include dynamic views to show how ships move, stop, and gather around ports. The visualization will also support multiple scales, enabling users to switch between global patterns and individual trajectories to compare ports by routes, activity over time, and anchoring behavior.
 
-Our approach focuses on interactive, time-aware, and multi-scale visualization of AIS vessel data, going beyond the static heatmaps and flow maps common in prior work. Instead of aggregated views, we analyze the temporal evolution of vessel trajectories in selected major ports, allowing users to explore how traffic patterns change over time. We emphasize event-driven and context-aware dynamics, such as variations before, during, and after disruptions, framing ports as dynamic systems shaped by vessel activity, route structures, and temporal rhythms.
-
-2. Trajectory-based Pattern Exploration and Dynamic Visualization
-
-To uncover structural patterns in AIS data, we incorporate trajectory-based visualization techniques inspired by particle flow, path bundling, and trajectory clustering. These methods reveal movement structures and common route patterns beyond simple density representations. We also design dynamic visualizations that explicitly show vessel movement over time, similar to traffic simulations, allowing users to intuitively observe how ships move, pause, and accumulate around port areas.
-
-3. Multi-scale and Interactive Exploration
-
-Our visualization integrates multi-scale exploration, enabling users to switch between global traffic patterns and individual vessel trajectories. This perspective highlights differences across ports in terms of route structure, temporal activity, and anchoring behavior, supported by clear visual encodings and interactions.
-
-Our design is guided by two main sources of inspiration:
-1）Drawing from data storytelling and interactive visualizations from The Pudding, with a focus on clear narratives and engaging design.
-2）Building on maritime analysis such as Hormuz Tracker, highlighting real-world vessel movement patterns and chokepoint dynamics.
+The design is inspired by the following two inspiration:
+1）The data storytelling and interactive visualizations: https://pudding.cool/
+2）Building on maritime analysis: https://www.hormuztracker.com/
 
 ## Milestone 2 (17th April, 5pm)
 
