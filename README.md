@@ -47,6 +47,12 @@ Our goal is to show that ports are not just fixed points on a map, but places wi
 > Pre-processing of the data set you chose
 > - Show some basic statistics and get insights about the data
 
+Due to the sheer size of the dataset, for better reproducibility, we extract 10% of the data from Jan 2024 to present EDA results. Preprocessing includes loading data, converting data types and performing basic data cleaning to obtain complete records. We also perform some feature engineering to: 1) map the feature codes in the AIS data to readable fields, primarily targeting the VesselType and Status columns; 2) extract records for each ship from the raw data and sort them by time to attempt to reconstruct the navigation trajectory for each ship. Some results are as follows:
+
+1. Basic Statistics: Overall, the data records have almost no duplicate records or outliers. The missing data rates for columns other than Heading, Status, COG, and SOG are almost zero. It is noted that the columns containing missing data all record the ship status information during navigation, with the missing data rates for Heading and Status reaching 51.1% and 26.7% respectively. We speculate that this is related to the limited AIS functionality used by some ships. More EDA results can be obtained in milestone1.ipynb.
+
+2. Spatial Mapping of Coordinates and Trajectories: We map the coordinates and recovered trajectories of some selected ships to their corresponding geographical locations, resulting in the two maps shown below. It's noteworthy that almost all records are distributed along the coast, the Great Lakes region, and the Mississippi River basin. Furthermore, the data shows higher density near major port cities such as Seattle, New York, and New Orleans, demonstrating the high reliability of the AIS data. Several interesting preliminary findings emerge. One example is that (at least within the selected timeframe), the ship density and number of routes on the US West Coast are generally lower than those on the East Coast and the Gulf Coast. This may be related to industrial structure, geographical characteristics, etc., which we will continue to analyze in subsequent work.
+
 ### Related work
 
 
