@@ -77,6 +77,16 @@ Representative examples include:
 
 - [Visual Analysis of Vessel Behaviour Based on Trajectory Data](https://www.mdpi.com/2220-9964/11/4/244) — example of academic AIS behavior/trajectory analysis.
 
+Our approach is original in its focus on interactive, time-aware, and multi-scale visualization of AIS vessel data, rather than relying on static aggregation commonly seen in prior work. Most existing visualizations represent maritime traffic using static heatmaps or aggregated flow maps, which fail to capture the underlying dynamics of vessel movement around ports. In contrast, we analyze the temporal evolution of vessel trajectories in selected major ports, allowing users to explore how traffic patterns change over time.
+
+In particular, we emphasize event- and context-aware dynamics, such as variations in traffic before, during, and after disruptive events (e.g., extreme weather conditions). This aligns with the idea of viewing ports as dynamic systems, where vessel activity, route structures, and temporal rhythms jointly define operational behavior.
+
+To further uncover structural patterns in AIS data, we incorporate trajectory-based visualization techniques, inspired by concepts such as particle flow, path bundling, and trajectory clustering. These methods help reveal movement structures and common route patterns, rather than only showing density distributions, making the organization of vessel traffic more interpretable.
+
+In addition, we design dynamic visualizations that explicitly show vessel movement over time, similar to weather radar animations or traffic simulations. This allows users to intuitively observe how ships move, pause, and accumulate around port areas.
+
+Finally, our visualization integrates multi-scale exploration, enabling users to switch between global traffic patterns and individual vessel trajectories within and across ports. This multi-level perspective helps highlight how different ports exhibit distinct movement signatures in terms of route structure, temporal activity, and anchoring or waiting behavior. Carefully designed visual encodings and interactions—using position, color, and motion—support clarity and usability while revealing complex patterns in AIS data.
+
 ## Milestone 2 (17th April, 5pm)
 
 **10% of the final grade**
