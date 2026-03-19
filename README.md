@@ -37,6 +37,11 @@ We use the 2024 dataset [https://www.kaggle.com/datasets/bwandowando/2024-us-coa
 > - What am I trying to show with my visualization?
 > - Think of an overview for the project, your motivation, and the target audience.
 
+**How can interactive visualization of AIS vessel data reveal the dynamics of selected major U.S. ports in 2024 through route structure, temporal activity rhythms, and waiting or anchoring behavior around port areas?**
+
+This project explores the 2024 U.S. Coast Guard / NOAA AIS dataset through an interactive web visualization centered on a selected set of major U.S. ports. Rather than simply displaying ship trajectories, we aim to represent ports as dynamic mobility systems. The visualization will combine route patterns, temporal activity views, and spatial distributions of waiting or anchoring behavior in order to show how vessel traffic is organized around ports and how these dynamics differ from one location to another.
+
+Our goal is to show that ports are not just fixed points on a map, but places with distinct movement signatures. By combining where ships move, when activity intensifies, and where vessels slow down or remain stationary, we hope to make complex AIS data more readable and reveal operational patterns that are not immediately visible in raw trajectory records. The project is intended for students and instructors in data visualization, as well as for a broader audience interested in maritime traffic, transportation systems, and coastal activity.
 ### Exploratory Data Analysis
 
 > Pre-processing of the data set you chose
@@ -49,6 +54,15 @@ We use the 2024 dataset [https://www.kaggle.com/datasets/bwandowando/2024-us-coa
 > - Why is your approach original?
 > - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
 > - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
+
+Existing work on AIS data already includes several well-established directions. NOAA’s AccessAIS tool provides interactive access to U.S. vessel traffic data and quick visualizations of traffic density and vessel counts. The OECD AIS Tracking Dashboard focuses on higher-level indicators such as port congestion and maritime trade flows. In parallel, academic work on AIS frequently studies vessel trajectories through clustering, behavior analysis, and route extraction. Our project does not aim to reproduce a generic ship-tracking map or a purely operational dashboard. Instead, we propose a focused interactive visualization of selected U.S. ports in 2024 that combines route structure, temporal port rhythms, and waiting or anchoring behavior. This comparative and exploratory angle is more centered on making port dynamics understandable to a broad audience than on providing raw traffic monitoring or predictive analytics.
+
+Representative examples include:
+- [NOAA AccessAIS](https://coast.noaa.gov/digitalcoast/tools/ais.html) — existing public U.S. vessel traffic visualization tool.
+
+- [OECD AIS Tracking Dashboard](https://www.oecd.org/en/data/dashboards/monitoring-maritime-trade-the-oecd-ais-vessel-tracking-dashboard.html) — example of port/trade/congestion dashboard.
+
+- [Visual Analysis of Vessel Behaviour Based on Trajectory Data](https://www.mdpi.com/2220-9964/11/4/244) — example of academic AIS behavior/trajectory analysis.
 
 ## Milestone 2 (17th April, 5pm)
 
