@@ -89,6 +89,10 @@ To uncover structural patterns in AIS data, we incorporate trajectory-based visu
 
 Our visualization integrates multi-scale exploration, enabling users to switch between global traffic patterns and individual vessel trajectories. This perspective highlights differences across ports in terms of route structure, temporal activity, and anchoring behavior, supported by clear visual encodings and interactions.
 
+Our design is guided by two main sources of inspiration:
+1）Drawing from data storytelling and interactive visualizations from The Pudding, with a focus on clear narratives and engaging design.
+2）Building on maritime analysis such as Hormuz Tracker, highlighting real-world vessel movement patterns and chokepoint dynamics.
+
 ## Milestone 2 (17th April, 5pm)
 
 **10% of the final grade**
