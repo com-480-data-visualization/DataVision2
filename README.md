@@ -53,8 +53,8 @@ Due to the sheer size of the dataset, for better reproducibility, we extract 10%
 
 2. Spatial Mapping of Coordinates and Trajectories: We map the coordinates and recovered trajectories of some selected ships to their corresponding geographical locations, resulting in the two maps shown below. It's noteworthy that almost all records are distributed along the coast, the Great Lakes region, and the Mississippi River basin. Furthermore, the data shows higher density near major port cities such as Seattle, New York, and New Orleans, demonstrating the high reliability of the AIS data. Several interesting preliminary findings emerge. One example is that (at least within the selected timeframe), the ship density and number of routes on the US West Coast are generally lower than those on the East Coast and the Gulf Coast. This may be related to industrial structure, geographical characteristics, etc., which we will continue to analyze in subsequent work.
 <p align="center">
-  <img src="./plot/spatial_hexbin.png" alt="Coordinates" width="45%">
-  <img src="./plot/sample_trajectories.png" alt="Trajectories" width="45%">
+  <img src="./plots/spatial_hexbin.png" alt="Coordinates" width="45%">
+  <img src="./plots/sample_trajectories.png" alt="Trajectories" width="45%">
 </p>
 
 ### Related work
