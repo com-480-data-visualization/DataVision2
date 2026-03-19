@@ -79,11 +79,12 @@ Representative examples include:
 
 - [Visual Analysis of Vessel Behaviour Based on Trajectory Data](https://www.mdpi.com/2220-9964/11/4/244) — example of academic AIS behavior/trajectory analysis.
 
-Our approach will focus on interactive, time-aware, and multi-scale visualization of AIS data, instead of static maps. We plan to analyze how vessel trajectories change over time in major ports, allowing users to explore traffic patterns and their variations before, during, and after events. We aim to use trajectory-based methods to reveal movement patterns beyond simple density maps, and include dynamic views to show how ships move, stop, and gather around ports. The visualization will also support multiple scales, enabling users to switch between global patterns and individual trajectories to compare ports by routes, activity over time, and anchoring behavior.
+Our approach will focus on interactive, time-aware, and multi-scale visualization of AIS data, instead of static maps. With the analysis of how vessel trajectories change over time in major ports, users will be allowed to explore traffic patterns and their variations before, during, and after events. We aim to use trajectory-based methods to reveal movement patterns beyond simple density maps, and include dynamic views to show how ships move, stop, and gather around ports. The visualization will also support multiple scales, enabling users to switch between global patterns and individual trajectories to compare ports by routes, activity over time, and anchoring behavior.
 
 The design is inspired by the following two inspiration:
-1）The data storytelling and interactive visualizations: https://pudding.cool/
-2）Building on maritime analysis: https://www.hormuztracker.com/
+- The data storytelling and interactive visualizations: https://pudding.cool/
+
+- Building on maritime analysis: https://www.hormuztracker.com/
 
 ## Milestone 2 (17th April, 5pm)
 
