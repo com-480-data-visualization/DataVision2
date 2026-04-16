@@ -1,0 +1,408 @@
+{
+  "global": {
+    "total_records": 22114377,
+    "unique_vessels": 3364,
+    "date_range": [
+      "2024-01-01",
+      "2024-01-31"
+    ],
+    "data_source": "USCG/NOAA AIS 2024-01 (10% sample)"
+  },
+  "hourly_activity": [
+    {
+      "hour": 0,
+      "n_records": 939413
+    },
+    {
+      "hour": 1,
+      "n_records": 932891
+    },
+    {
+      "hour": 2,
+      "n_records": 927015
+    },
+    {
+      "hour": 3,
+      "n_records": 924578
+    },
+    {
+      "hour": 4,
+      "n_records": 904786
+    },
+    {
+      "hour": 5,
+      "n_records": 916007
+    },
+    {
+      "hour": 6,
+      "n_records": 840474
+    },
+    {
+      "hour": 7,
+      "n_records": 901625
+    },
+    {
+      "hour": 8,
+      "n_records": 917391
+    },
+    {
+      "hour": 9,
+      "n_records": 917288
+    },
+    {
+      "hour": 10,
+      "n_records": 879549
+    },
+    {
+      "hour": 11,
+      "n_records": 918253
+    },
+    {
+      "hour": 12,
+      "n_records": 916651
+    },
+    {
+      "hour": 13,
+      "n_records": 922153
+    },
+    {
+      "hour": 14,
+      "n_records": 935740
+    },
+    {
+      "hour": 15,
+      "n_records": 965015
+    },
+    {
+      "hour": 16,
+      "n_records": 959652
+    },
+    {
+      "hour": 17,
+      "n_records": 943961
+    },
+    {
+      "hour": 18,
+      "n_records": 922652
+    },
+    {
+      "hour": 19,
+      "n_records": 942053
+    },
+    {
+      "hour": 20,
+      "n_records": 791704
+    },
+    {
+      "hour": 21,
+      "n_records": 974657
+    },
+    {
+      "hour": 22,
+      "n_records": 963873
+    },
+    {
+      "hour": 23,
+      "n_records": 956996
+    }
+  ],
+  "vessel_types": [
+    {
+      "type": "Pleasure craft",
+      "n_unique": 1102,
+      "color": "#8BC34A"
+    },
+    {
+      "type": "Sailing",
+      "n_unique": 519,
+      "color": "#00BCD4"
+    },
+    {
+      "type": "Unknown",
+      "n_unique": 243,
+      "color": "#607D8B"
+    },
+    {
+      "type": "Cargo",
+      "n_unique": 236,
+      "color": "#2196F3"
+    },
+    {
+      "type": "Towing",
+      "n_unique": 234,
+      "color": "#FF6F00"
+    },
+    {
+      "type": "Fishing",
+      "n_unique": 232,
+      "color": "#4CAF50"
+    },
+    {
+      "type": "Tug",
+      "n_unique": 193,
+      "color": "#FF9800"
+    },
+    {
+      "type": "Passenger",
+      "n_unique": 143,
+      "color": "#9C27B0"
+    },
+    {
+      "type": "Tanker",
+      "n_unique": 117,
+      "color": "#FF5722"
+    },
+    {
+      "type": "Search and rescue",
+      "n_unique": 66,
+      "color": "#F44336"
+    },
+    {
+      "type": "Other",
+      "n_unique": 46,
+      "color": "#9E9E9E"
+    },
+    {
+      "type": "Cargo - Hazard A",
+      "n_unique": 42,
+      "color": "#1565C0"
+    },
+    {
+      "type": "Law enforcement",
+      "n_unique": 34,
+      "color": "#455A64"
+    },
+    {
+      "type": "Dredging or underwater ops",
+      "n_unique": 22,
+      "color": "#795548"
+    },
+    {
+      "type": "Spare local vessel",
+      "n_unique": 17,
+      "color": "#78909C"
+    },
+    {
+      "type": "Cargo - Hazard D",
+      "n_unique": 16,
+      "color": "#42A5F5"
+    },
+    {
+      "type": "High-speed craft",
+      "n_unique": 14,
+      "color": "#00E5FF"
+    },
+    {
+      "type": "Military ops",
+      "n_unique": 13,
+      "color": "#607D8B"
+    },
+    {
+      "type": "Pilot vessel",
+      "n_unique": 13,
+      "color": "#26C6DA"
+    },
+    {
+      "type": "Towing astern",
+      "n_unique": 11,
+      "color": "#FFA000"
+    },
+    {
+      "type": "Anti-pollution",
+      "n_unique": 10,
+      "color": "#69F0AE"
+    },
+    {
+      "type": "Diving ops",
+      "n_unique": 9,
+      "color": "#40C4FF"
+    },
+    {
+      "type": "Tanker - Hazard B",
+      "n_unique": 7,
+      "color": "#FF7043"
+    },
+    {
+      "type": "Tanker - Hazard A",
+      "n_unique": 5,
+      "color": "#E64A19"
+    },
+    {
+      "type": "Tanker - Hazard D",
+      "n_unique": 5,
+      "color": "#FFAB91"
+    },
+    {
+      "type": "Port tender",
+      "n_unique": 4,
+      "color": "#B0BEC5"
+    },
+    {
+      "type": "Cargo - Hazard B",
+      "n_unique": 4,
+      "color": "#1976D2"
+    },
+    {
+      "type": "Tanker - Hazard C",
+      "n_unique": 2,
+      "color": "#FF8A65"
+    },
+    {
+      "type": "Passenger - Hazard B",
+      "n_unique": 1,
+      "color": "#AB47BC"
+    },
+    {
+      "type": "Noncombatant ship",
+      "n_unique": 1,
+      "color": "#546E7A"
+    },
+    {
+      "type": "Medical transport",
+      "n_unique": 1,
+      "color": "#EF9A9A"
+    },
+    {
+      "type": "Cargo - Hazard C",
+      "n_unique": 1,
+      "color": "#1E88E5"
+    },
+    {
+      "type": "Wing in ground",
+      "n_unique": 1,
+      "color": "#CE93D8"
+    }
+  ],
+  "nav_status": [
+    {
+      "status": "Under way using engine",
+      "n_records": 8174443
+    },
+    {
+      "status": "Unknown",
+      "n_records": 5915037
+    },
+    {
+      "status": "Reserved",
+      "n_records": 2757594
+    },
+    {
+      "status": "Moored",
+      "n_records": 2679234
+    },
+    {
+      "status": "Undefined",
+      "n_records": 1282462
+    },
+    {
+      "status": "At anchor",
+      "n_records": 671026
+    },
+    {
+      "status": "Restricted maneuverability",
+      "n_records": 348180
+    },
+    {
+      "status": "Engaged in fishing",
+      "n_records": 157361
+    },
+    {
+      "status": "Under way sailing",
+      "n_records": 81460
+    },
+    {
+      "status": "Not under command",
+      "n_records": 45134
+    },
+    {
+      "status": "Constrained by draft",
+      "n_records": 1334
+    },
+    {
+      "status": "AIS-SART / MOB / EPIRB",
+      "n_records": 920
+    },
+    {
+      "status": "Aground",
+      "n_records": 192
+    }
+  ],
+  "sog_distribution": [
+    {
+      "bin_center": 0.5,
+      "count": 16841078
+    },
+    {
+      "bin_center": 1.5,
+      "count": 405077
+    },
+    {
+      "bin_center": 2.5,
+      "count": 405077
+    },
+    {
+      "bin_center": 3.5,
+      "count": 405077
+    },
+    {
+      "bin_center": 4.5,
+      "count": 405077
+    },
+    {
+      "bin_center": 5.5,
+      "count": 405077
+    },
+    {
+      "bin_center": 6.5,
+      "count": 405077
+    },
+    {
+      "bin_center": 7.5,
+      "count": 405077
+    },
+    {
+      "bin_center": 8.5,
+      "count": 405077
+    },
+    {
+      "bin_center": 9.5,
+      "count": 405077
+    },
+    {
+      "bin_center": 10.5,
+      "count": 405077
+    },
+    {
+      "bin_center": 11.5,
+      "count": 189700
+    },
+    {
+      "bin_center": 12.5,
+      "count": 135856
+    },
+    {
+      "bin_center": 13.5,
+      "count": 135856
+    },
+    {
+      "bin_center": 14.5,
+      "count": 135856
+    },
+    {
+      "bin_center": 16.0,
+      "count": 271713
+    },
+    {
+      "bin_center": 18.5,
+      "count": 103249
+    },
+    {
+      "bin_center": 22.5,
+      "count": 17718
+    },
+    {
+      "bin_center": 27.5,
+      "count": 17718
+    }
+  ]
+}

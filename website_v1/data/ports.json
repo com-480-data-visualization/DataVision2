@@ -1,0 +1,147 @@
+[
+  {
+    "id": "LA",
+    "name": "Port of Los Angeles / Long Beach",
+    "lat": 33.735,
+    "lon": -118.265,
+    "state": "CA",
+    "anchor_zones": [
+      {
+        "lat": 33.68,
+        "lon": -118.2,
+        "radius_km": 3.2,
+        "label": "San Pedro Bay Anchorage"
+      },
+      {
+        "lat": 33.72,
+        "lon": -118.28,
+        "radius_km": 2.1,
+        "label": "Long Beach Outer Anchorage"
+      }
+    ],
+    "n_unique_vessels": 239,
+    "n_records": 1509216,
+    "top_types": [
+      "Pleasure craft",
+      "Cargo",
+      "Sailing",
+      "Tug"
+    ]
+  },
+  {
+    "id": "NY",
+    "name": "Port of New York / New Jersey",
+    "lat": 40.665,
+    "lon": -74.065,
+    "state": "NY",
+    "anchor_zones": [
+      {
+        "lat": 40.6,
+        "lon": -74.05,
+        "radius_km": 2.8,
+        "label": "Lower Bay Anchorage"
+      },
+      {
+        "lat": 40.69,
+        "lon": -74.1,
+        "radius_km": 1.9,
+        "label": "Kill Van Kull Waiting"
+      }
+    ],
+    "n_unique_vessels": 134,
+    "n_records": 1190427,
+    "top_types": [
+      "Tug",
+      "Unknown",
+      "Passenger",
+      "Towing"
+    ]
+  },
+  {
+    "id": "SEA",
+    "name": "Port of Seattle",
+    "lat": 47.6,
+    "lon": -122.345,
+    "state": "WA",
+    "anchor_zones": [
+      {
+        "lat": 47.58,
+        "lon": -122.39,
+        "radius_km": 2.0,
+        "label": "Elliott Bay Anchorage"
+      },
+      {
+        "lat": 47.62,
+        "lon": -122.43,
+        "radius_km": 1.5,
+        "label": "Puget Sound Waiting"
+      }
+    ],
+    "n_unique_vessels": 337,
+    "n_records": 2533038,
+    "top_types": [
+      "Pleasure craft",
+      "Passenger",
+      "Fishing",
+      "Sailing"
+    ]
+  },
+  {
+    "id": "HOU",
+    "name": "Port of Houston",
+    "lat": 29.735,
+    "lon": -95.265,
+    "state": "TX",
+    "anchor_zones": [
+      {
+        "lat": 29.68,
+        "lon": -94.95,
+        "radius_km": 3.5,
+        "label": "Galveston Outer Bar Anchorage"
+      },
+      {
+        "lat": 29.71,
+        "lon": -95.1,
+        "radius_km": 2.0,
+        "label": "Houston Ship Channel Waiting"
+      }
+    ],
+    "n_unique_vessels": 256,
+    "n_records": 2625743,
+    "top_types": [
+      "Towing",
+      "Tug",
+      "Tanker",
+      "Spare local vessel"
+    ]
+  },
+  {
+    "id": "NOL",
+    "name": "Port of New Orleans",
+    "lat": 29.945,
+    "lon": -90.065,
+    "state": "LA",
+    "anchor_zones": [
+      {
+        "lat": 29.86,
+        "lon": -89.95,
+        "radius_km": 2.8,
+        "label": "Lower Mississippi Anchorage"
+      },
+      {
+        "lat": 29.92,
+        "lon": -90.12,
+        "radius_km": 1.6,
+        "label": "Mississippi River Waiting"
+      }
+    ],
+    "n_unique_vessels": 312,
+    "n_records": 3668550,
+    "top_types": [
+      "Towing",
+      "Tug",
+      "Passenger",
+      "Cargo"
+    ]
+  }
+]

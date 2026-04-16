@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIS Port Dynamics — US Coastal Vessel Traffic 2024</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="loading">
+  <div class="spinner"></div>
+  <div class="load-text">Loading…</div>
+</div>
+<header id="header">
+  <a class="logo" href="#">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M3 11l19-9-9 19-2-8-8-2z"/>
+    </svg>
+    AIS Port Dynamics
+  </a>
+  <span class="subtitle">US Coastal Vessel Traffic · 2024</span>
+  <div class="spacer"></div>
+  <span class="badge">USCG / NOAA AIS</span>
+  <span class="badge">2024-01 · 10% sample</span>
+  <span class="badge" id="view-mode-badge">Global view</span>
+</header>
+
+<div id="layout">
+  <aside id="sidebar">
+    <div class="sidebar-section">
+      <div class="section-title">Dataset Overview</div>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-val" id="stat-records">—</div>
+          <div class="stat-lbl">AIS Records</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="stat-vessels">—</div>
+          <div class="stat-lbl">Unique Vessels</div>
+        </div>
+        <div class="stat-card" style="grid-column:span 2">
+          <div class="stat-lbl">Date range</div>
+          <div style="font-size:12px;font-weight:600;margin-top:3px;color:#e6edf3" id="stat-date">—</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="section-title">Select Port</div>
+      <div id="port-list"></div>
+      <button onclick="deselectPort()" style="
+        width:100%; margin-top:6px; padding:5px; border-radius:5px; cursor:pointer;
+        background:none; border:1px solid #30363d; color:#8b949e; font-size:11px;
+      ">↩ Return to overview</button>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="section-title">Time Filter</div>
+      <div class="filter-row">
+        <div class="filter-label">Hour of day <span id="hour-label">All hours</span></div>
+        <input type="range" id="hour-slider" min="-1" max="23" value="-1" step="1" />
+      </div>
+    </div>
+
+    <div class="sidebar-section" id="pattern-section">
+      <div class="section-title">Navigation Pattern</div>
+      <div class="pattern-row">
+        <button class="pattern-btn active" data-pattern="all">All</button>
+        <button class="pattern-btn active" data-pattern="inbound">Inbound</button>
+        <button class="pattern-btn active" data-pattern="outbound">Outbound</button>
+        <button class="pattern-btn active" data-pattern="anchored">Anchored</button>
+        <button class="pattern-btn active" data-pattern="coastal">Coastal</button>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="section-title">Vessel Type Filter</div>
+      <div class="type-grid" id="type-grid"></div>
+    </div>
+
+  </aside>
+  <div id="map-container">
+    <div id="map"></div>
+    <div class="map-ctrl" id="view-toggles">
+      <button class="view-btn active" id="btn-global-view">Global View</button>
+      <button class="view-btn" id="btn-port-view" disabled>Port View</button>
+    </div>
+    <div class="map-ctrl" id="map-legend">
+      <div style="font-size:10px;font-weight:600;color:#8b949e;margin-bottom:4px;letter-spacing:.06em;text-transform:uppercase">Track type</div>
+      <div class="legend-row"><div class="legend-line" style="background:#3fb950"></div>Inbound</div>
+      <div class="legend-row"><div class="legend-line" style="background:#2f81f7"></div>Outbound</div>
+      <div class="legend-row"><div class="legend-line" style="background:#f0883e"></div>Anchored / Waiting</div>
+      <div class="legend-row"><div class="legend-line" style="background:#bc8cff"></div>Coastal</div>
+      <div style="margin-top:8px;font-size:10px;font-weight:600;color:#8b949e;margin-bottom:4px;letter-spacing:.06em;text-transform:uppercase">Anchor zone</div>
+      <div class="legend-row">
+        <div style="width:20px;height:0;border:1px dashed #f0883e;opacity:.7"></div>
+        Waiting / Anchorage area
+      </div>
+    </div>
+  </div>
+  <aside id="right-panel">
+    <div class="tab-bar">
+      <button class="tab-btn active" data-pane="tab-port">Port</button>
+      <button class="tab-btn" data-pane="tab-activity">Activity</button>
+      <button class="tab-btn" data-pane="tab-fleet">Fleet</button>
+    </div>
+    <div id="tab-port" class="tab-pane active rp-section">
+      <div id="no-port-msg" class="no-port-msg">
+        Select a port on the left<br>or click a marker on the map<br>to view port details.
+      </div>
+      <div id="port-detail-card" class="port-detail-card"></div>
+    </div>
+    <div id="tab-activity" class="tab-pane">
+      <div id="activity-context-bar" class="activity-context-bar">
+        <span id="activity-context-label">Global dataset</span>
+      </div>
+      <div class="rp-section">
+        <div class="section-title">Hourly Activity</div>
+        <div class="chart-wrap"><div id="chart-hourly"></div></div>
+      </div>
+      <div class="rp-section">
+        <div class="section-title">Speed over Ground (knots)</div>
+        <div class="chart-wrap"><div id="chart-sog"></div></div>
+      </div>
+      <div class="rp-section">
+        <div class="section-title">Navigation Status <span class="chart-scope-note" id="status-scope-note"></span></div>
+        <div class="chart-wrap"><div id="chart-status"></div></div>
+      </div>
+    </div>
+    <div id="tab-fleet" class="tab-pane">
+      <div id="fleet-context-bar" class="activity-context-bar">
+        <span id="fleet-context-label">Global dataset</span>
+      </div>
+      <div class="rp-section">
+        <div class="section-title">Unique Vessels by Type</div>
+        <div class="chart-wrap"><div id="chart-types"></div></div>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<script src="js/map.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
