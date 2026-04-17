@@ -90,13 +90,11 @@ The design is inspired by the following two sources:
 
 **10% of the final grade**
 
-This milestone presents the initial working prototype of our AIS data visualization project. It includes the core design of a multi-view interactive system analyzing vessel traffic around major U.S. ports.
+This milestone defines the project goal and presents the initial functional prototype of our AIS data visualization system.
 
-A detailed description of the project design, dataset, and implementation can be found in the Milestone 2 report.
+📄 The full milestone report is available in `milestone2.pdf`.
 
-📄 See: `milestone2.pdf`
-
-🌐 Interactive prototype:
+🌐 The initial web prototype is available at:
 https://com-480-data-visualization.github.io/DataVision2/
 
 ## Milestone 3 (29th May, 5pm)
